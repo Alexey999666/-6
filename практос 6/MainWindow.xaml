@@ -1,0 +1,74 @@
+﻿<Window x:Class="практос_6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:практос_6"
+        mc:Ignorable="d"       
+        Title="Практическая 6" Height="490" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Menu Grid.Row="0" Background="DarkViolet" Foreground="Gold" Grid.ColumnSpan="3">
+            <MenuItem Header="Файл" Height="25" Background="DarkViolet" Foreground="Gold">
+                <MenuItem Header="Выйти" Click="btnExit_Click" Background="DarkViolet" Foreground="Gold"/>
+            </MenuItem>
+            <MenuItem Header="Действия" Background="DarkViolet" Foreground="Gold">
+                <MenuItem Header="Записать" ToolTip="Создать новую жидкость" Click="btnWrite_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Сравнить" ToolTip="Сравниваем название и объём жидкостей" Click="btnCompare_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Показать 1" ToolTip="Показать параметры первой житкости" Click="btnShowLiquid1_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Показать 2" ToolTip="Показать параметры второй житкости" Click="btnShowLiquid2_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Увеличить" ToolTip="Увеличить объём на 1" Click="btnIncreaseVolume_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Уменьшить" ToolTip="Уменьшить объём на 1" Click="btnReduceVolume_Click"  Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Очистить"  Click="btnClean_Click"  Background="DarkViolet" Foreground="Gold"/>
+            </MenuItem>
+            <MenuItem Header="Справка" Background="DarkViolet" Foreground="Gold">
+                <MenuItem Header="О программе" Click="btnInfo_Click" Background="DarkViolet" Foreground="Gold"/>
+                <MenuItem Header="Разработчик" Click="btnDeveloper_Click" Background="DarkViolet" Foreground="Gold"/>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" Grid.Column="0" Background="Red" >
+            <Label Content="Название первой жидкости" HorizontalContentAlignment="Center" Foreground="Orange"/>
+            <TextBox x:Name="tbName1Input" TextWrapping="Wrap" Height="60" TextAlignment="Center" VerticalAlignment="Center"  Background="Red" BorderBrush="Black"  />
+            <Label Content="Название второй жидкости" HorizontalContentAlignment="Center" Foreground="Orange"/>
+            <TextBox x:Name="tbName2Input" TextWrapping="Wrap" Height="60" TextAlignment="Center" VerticalAlignment="Center"  Background="Red" BorderBrush="Black"  />
+            <Button   Content="Записать" ToolTip="Создать новую жидкость" Click="btnWrite_Click" Height="50" Margin="0,10,0,10" BorderBrush="Black" Background="DarkRed" Foreground="Orange"/>
+            <Label Content="Название жидкости" HorizontalContentAlignment="Center" Foreground="Orange"/>
+            <TextBox x:Name="tbNameOutput" TextWrapping="Wrap" TextAlignment="Center" Background="Red" BorderBrush="Black" IsReadOnly="True"  Height="60"/>
+            <Button   Content="Выход"  Click="btnExit_Click" Height="60" Margin="0,26,0,10" BorderBrush="Black" Background="DarkRed" Foreground="Orange"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Background="Blue" >
+            <Label Content="Плотность первой жидкости" HorizontalContentAlignment="Center" Foreground="Yellow" />
+            <TextBox x:Name="tbDensity1Input" TextWrapping="Wrap" TextAlignment="Center" Height="60"  Background="Blue" BorderBrush="Black" />
+            <Label Content="Плотность второй жидкости" HorizontalContentAlignment="Center" Foreground="Yellow" />
+            <TextBox x:Name="tbDensity2Input" TextWrapping="Wrap" TextAlignment="Center" Height="60"  Background="Blue" BorderBrush="Black" />
+            <Button  Content="Сравнить" ToolTip="Сравниваем название и объём жидкостей" Click="btnCompare_Click" Height="50" Margin="0,10,0,10" BorderBrush="Black" Background="DarkBlue" Foreground="Yellow"/>
+            <Label Content="Плотность жидкости" HorizontalContentAlignment="Center" Foreground="Yellow"/>
+            <TextBox x:Name="tbDensityOutput" IsReadOnly="True" TextWrapping="Wrap" TextAlignment="Center" Height="60" Background="Blue" BorderBrush="Black"/>
+            <Label Content="Жидкости одинаковые" HorizontalContentAlignment="Center" Foreground="Yellow"/>
+            <TextBox x:Name="tbCompare" IsReadOnly="True" TextWrapping="Wrap" TextAlignment="Center" Height="60" Background="Blue" BorderBrush="Black"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="2" Background="Green" >
+            <Label Content="Объём жидкости" HorizontalContentAlignment="Center" Foreground="Goldenrod"/>
+            <TextBox x:Name="tbVolume1Input" TextWrapping="Wrap" TextAlignment="Center" Height="60"  Background="Green" BorderBrush="Black"  />
+            <Label Content="Объём жидкости" HorizontalContentAlignment="Center" Foreground="Goldenrod"/>
+            <TextBox x:Name="tbVolume2Input" TextWrapping="Wrap" TextAlignment="Center" Height="60"  Background="Green" BorderBrush="Black"  />
+            <Button  Content="Показать первую жидкость" ToolTip="Показать параметры житкости" Click="btnShowLiquid1_Click" Height="25" Margin="0,10,0,0"  Background="DarkGreen" Foreground="Goldenrod" BorderBrush="Black"/>
+            <Button  Content="Показать вторую жидкость" ToolTip="Показать параметры житкости" Click="btnShowLiquid2_Click" Height="25" Margin="0,0,0,10" Background="DarkGreen" Foreground="Goldenrod" BorderBrush="Black"/>
+            <Label Content="Объём жидкости" HorizontalContentAlignment="Center" Foreground="Goldenrod"/>
+            <TextBox x:Name="tbVolumeOutput" IsReadOnly="True" TextWrapping="Wrap" TextAlignment="Center" Height="60" Background="Green" BorderBrush="Black"/>
+            <Button  Content="Увеличить" ToolTip="Увеличить объём на 1" Click="btnIncreaseVolume_Click" Height="30" Margin="0,26,0,0" Background="DarkGreen" Foreground="Goldenrod" BorderBrush="Black"/>
+            <Button  Content="Уменьшить" ToolTip="Уменьшить объём на 1" Click="btnReduceVolume_Click" Height="30"  Background="DarkGreen" Foreground="Goldenrod" BorderBrush="Black"/>
+        </StackPanel>
+    </Grid>
+</Window>
+

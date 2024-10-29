@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35222.181
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "практос 6", "практос 6\практос 6.csproj", "{B5C2E6D3-E9B9-41BF-AC29-A12DF9BA3AF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_14", "Lib_14\Lib_14.csproj", "{EF13780B-342A-4C63-BAD7-040971155703}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5C2E6D3-E9B9-41BF-AC29-A12DF9BA3AF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5C2E6D3-E9B9-41BF-AC29-A12DF9BA3AF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5C2E6D3-E9B9-41BF-AC29-A12DF9BA3AF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5C2E6D3-E9B9-41BF-AC29-A12DF9BA3AF5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF13780B-342A-4C63-BAD7-040971155703}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF13780B-342A-4C63-BAD7-040971155703}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF13780B-342A-4C63-BAD7-040971155703}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF13780B-342A-4C63-BAD7-040971155703}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {270AF803-9468-4AC1-862E-D6B356BEAAB5}
+	EndGlobalSection
+EndGlobal
